@@ -1,0 +1,9 @@
+.pageTitle {
+  font-size: 29px;
+  font-weight: 500;
+  color: var(--black);
+
+  @media (max-width: 720px) {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,52 @@
+@use "@src/shared/scss/logic/function";
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  color: var(--gray);
+  padding: 10px 42px;
+  transition: background-color 0.2s ease;
+
+  svg {
+    stroke: var(--gray);
+  }
+
+  &:hover {
+    background-color: rgba(67, 145, 237, 0.05);
+  }
+
+  @media (max-width: 1024px) {
+    padding: 10px 20px;
+  }
+}
+
+.menuItemActive {
+  background-color: var(--light-blue);
+  color: var(--black);
+
+  svg {
+    stroke: var(--black);
+  }
+}
+
+.menuItemIconContainer {
+  position: relative;
+  flex-shrink: 0;
+  width: 24px;
+  aspect-ratio: 1;
+  margin-right: 16px;
+
+  svg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+.menuItemTitle {
+  font-size: 16px;
+}

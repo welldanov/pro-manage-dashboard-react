@@ -1,0 +1,64 @@
+.task {
+  padding: 24px;
+  border-radius: 20px;
+  background-color: var(--white);
+
+  @media (max-width: 960px) {
+    padding: 20px;
+  }
+}
+
+.taskHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.taskCategory {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 5px;
+
+  font-size: 8px;
+  text-transform: uppercase;
+  color: var(--gray);
+
+  &:before {
+    display: inline-block;
+    content: '';
+    width: 9px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: var(--before-color);
+  }
+}
+
+.taskHeaderAction {
+  position: relative;
+  width: 16px;
+  height: 4px;
+  flex-shrink: 0;
+
+  svg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+.taskTitle {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.taskDescription {
+  font-size: 12px;
+  font-weight: 400;
+}

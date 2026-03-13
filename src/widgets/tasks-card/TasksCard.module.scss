@@ -1,0 +1,97 @@
+.tasksCard {
+  flex: 1;
+  max-height: calc(100vh - 184px - 28px);
+  padding: 24px 0;
+  border-radius: 10px;
+  background-color: var(--light-gray);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  @media (max-width: 1024px) {
+    padding: 16px 0;
+  }
+  @media (max-width: 960px) {
+    padding: 12px 0;
+  }
+  @media (max-width: 720px) {
+    padding: 16px 0;
+    flex: 0 0 100%;
+  }
+}
+
+.tasksCardGap {
+  row-gap: 24px;
+
+  @media (max-width: 1024px) {
+    row-gap: 16px;
+  }
+}
+
+.tasksCardHeader {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+
+  @media (max-width: 1024px) {
+    padding: 0 16px;
+  }
+  @media (max-width: 960px) {
+    padding: 0 12px;
+  }
+  @media (max-width: 720px) {
+    padding: 0 16px;
+  }
+}
+
+.tasksCardHeaderTitle {
+  font-size: 16px;
+}
+
+.tasksCardHeaderActions {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+
+  @media (max-width: 720px) {
+    column-gap: 18px;
+  }
+}
+
+.tasksCardHeaderAction {
+  position: relative;
+  flex-shrink: 0;
+
+  svg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+.tasksCardTasks {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  padding: 0 24px;
+
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+
+  @media (max-width: 1024px) {
+    padding: 0 16px;
+  }
+  @media (max-width: 960px) {
+    padding: 0 12px;
+  }
+  @media (max-width: 720px) {
+    padding: 0 16px;
+  }
+}

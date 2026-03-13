@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 28px 0;
+  column-gap: 38px;
+}
+
+.iconContainer {
+  position: relative;
+  flex-shrink: 0;
+
+  &:not(:last-child) svg {
+    stroke: var(--black);
+  }
+
+  svg {
+    transition: stroke 0.2s ease;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  &:hover:not(:last-child) svg {
+    stroke: var(--gray);
+  }
+}
